@@ -1,0 +1,47 @@
+{
+  "name": "testable-code",
+  "private": "true",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "jest",
+    "postinstall": "husky install",
+    "ci": "yarn test",
+    "build": "ttsc -p tsconfig.build.json",
+    "dev": "ts-node --compiler ttypescript --project tsconfig.build.json -r @effect-ts/tracing-utils/Enable src/index.ts",
+    "start": "node -r @effect-ts/tracing-utils/Enable lib/index.js",
+    "clean": "rimraf lib tsbuildinfo"
+  },
+  "devDependencies": {
+    "@effect-ts/tracing-plugin": "^0.8.0",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-codegen": "^0.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sort-destructure-keys": "^1.3.5",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
+    "ttypescript": "^1.5.12",
+    "typescript": "4.2.3",
+    "yarn-deduplicate": "^3.1.0"
+  },
+  "dependencies": {
+    "@effect-ts/core": "^0.28.1",
+    "@effect-ts/node": "^0.17.0",
+    "@effect-ts/tracing-utils": "^0.5.0",
+    "fast-check": "^2.14.0",
+    "yarn": "^1.22.10"
+  }
+}

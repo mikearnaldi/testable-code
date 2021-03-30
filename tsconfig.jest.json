@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": "tsbuildinfo/jest.tsbuildinfo",
+    "plugins": [
+      { "transform": "@effect-ts/tracing-plugin" },
+      { "transform": "@zerollup/ts-transform-paths" }
+    ]
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"]
+}
