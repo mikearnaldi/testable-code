@@ -38,7 +38,7 @@
     "yarn-deduplicate": "^3.1.0"
   },
   "dependencies": {
-    "@effect-ts/core": "^0.28.1",
+    "@effect-ts/core": "^0.28.7",
     "@effect-ts/node": "^0.17.0",
     "@effect-ts/tracing-utils": "^0.5.0",
     "fast-check": "^2.14.0",
